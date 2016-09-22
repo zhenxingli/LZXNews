@@ -11,9 +11,7 @@
 		FF429DEF1D92B6CF00F6DE7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DEE1D92B6CF00F6DE7E /* main.m */; };
 		FF429DF21D92B6CF00F6DE7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DF11D92B6CF00F6DE7E /* AppDelegate.m */; };
 		FF429DF51D92B6CF00F6DE7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DF41D92B6CF00F6DE7E /* ViewController.m */; };
-		FF429DF81D92B6CF00F6DE7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF429DF61D92B6CF00F6DE7E /* Main.storyboard */; };
-		FF429DFA1D92B6CF00F6DE7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF429DF91D92B6CF00F6DE7E /* Assets.xcassets */; };
-		FF429DFD1D92B6D000F6DE7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF429DFB1D92B6D000F6DE7E /* LaunchScreen.storyboard */; };
+		FF429DFA1D92B6CF00F6DE7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF429DF91D92B6CF00F6DE7E /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,9 +24,7 @@
 		FF429DF11D92B6CF00F6DE7E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FF429DF31D92B6CF00F6DE7E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FF429DF41D92B6CF00F6DE7E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FF429DF71D92B6CF00F6DE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF429DF91D92B6CF00F6DE7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF429DFC1D92B6D000F6DE7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF429DF91D92B6CF00F6DE7E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF429DFE1D92B6D000F6DE7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +82,7 @@
 				FF429DF11D92B6CF00F6DE7E /* AppDelegate.m */,
 				FF429DF31D92B6CF00F6DE7E /* ViewController.h */,
 				FF429DF41D92B6CF00F6DE7E /* ViewController.m */,
-				FF429DF61D92B6CF00F6DE7E /* Main.storyboard */,
-				FF429DF91D92B6CF00F6DE7E /* Assets.xcassets */,
-				FF429DFB1D92B6D000F6DE7E /* LaunchScreen.storyboard */,
+				FF429DF91D92B6CF00F6DE7E /* Images.xcassets */,
 				FF429DFE1D92B6D000F6DE7E /* Info.plist */,
 				FF429DED1D92B6CF00F6DE7E /* Supporting Files */,
 			);
@@ -164,9 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF429DFD1D92B6D000F6DE7E /* LaunchScreen.storyboard in Resources */,
-				FF429DFA1D92B6CF00F6DE7E /* Assets.xcassets in Resources */,
-				FF429DF81D92B6CF00F6DE7E /* Main.storyboard in Resources */,
+				FF429DFA1D92B6CF00F6DE7E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,25 +224,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		FF429DF61D92B6CF00F6DE7E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF429DF71D92B6CF00F6DE7E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FF429DFB1D92B6D000F6DE7E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FF429DFC1D92B6D000F6DE7E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FF429DFF1D92B6D000F6DE7E /* Debug */ = {
@@ -340,6 +313,7 @@
 			baseConfigurationReference = AEF4B6D3D42A2B1A89DDADA4 /* Pods-LZXNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LZXNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.LZXNews;
@@ -352,6 +326,7 @@
 			baseConfigurationReference = 5599E68935980011B7A2266D /* Pods-LZXNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = LZXNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Test.com.LZXNews;
