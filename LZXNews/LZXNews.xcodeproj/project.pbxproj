@@ -12,6 +12,9 @@
 		FF429DFA1D92B6CF00F6DE7E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF429DF91D92B6CF00F6DE7E /* Images.xcassets */; };
 		FF49BF2F1D93CDE000E5FDBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF49BF2E1D93CDE000E5FDBD /* ViewController.m */; };
 		FF49BF321D93CE3600E5FDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF49BF311D93CE3600E5FDBD /* AppDelegate.m */; };
+		FF49BF4C1D93CF8100E5FDBD /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF49BF4A1D93CF8100E5FDBD /* JPEngine.m */; };
+		FF49BF4D1D93CF8100E5FDBD /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = FF49BF4B1D93CF8100E5FDBD /* JSPatch.js */; };
+		FF49BF4F1D93D00600E5FDBD /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = FF49BF4E1D93D00600E5FDBD /* main.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		FF49BF2E1D93CDE000E5FDBD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FF49BF301D93CE3600E5FDBD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FF49BF311D93CE3600E5FDBD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FF49BF491D93CF8100E5FDBD /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
+		FF49BF4A1D93CF8100E5FDBD /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
+		FF49BF4B1D93CF8100E5FDBD /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		FF49BF4E1D93D00600E5FDBD /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = Class/main.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +85,7 @@
 		FF429DEC1D92B6CF00F6DE7E /* LZXNews */ = {
 			isa = PBXGroup;
 			children = (
+				FF49BF331D93CEA800E5FDBD /* lib */,
 				FF49BF2C1D93CDE000E5FDBD /* Class */,
 				FF429DF91D92B6CF00F6DE7E /* Images.xcassets */,
 				FF429DFE1D92B6D000F6DE7E /* Info.plist */,
@@ -89,6 +97,7 @@
 		FF429DED1D92B6CF00F6DE7E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FF49BF4E1D93D00600E5FDBD /* main.js */,
 				FF429DEE1D92B6CF00F6DE7E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -103,6 +112,184 @@
 				FF49BF311D93CE3600E5FDBD /* AppDelegate.m */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		FF49BF331D93CEA800E5FDBD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF341D93CEA800E5FDBD /* jspatch */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		FF49BF341D93CEA800E5FDBD /* jspatch */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF351D93CEA800E5FDBD /* Extensions */,
+				FF49BF441D93CEA800E5FDBD /* JSPatch */,
+				FF49BF451D93CEA800E5FDBD /* Loader */,
+			);
+			path = jspatch;
+			sourceTree = "<group>";
+		};
+		FF49BF351D93CEA800E5FDBD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF361D93CEA800E5FDBD /* JPCFunction */,
+				FF49BF3E1D93CEA800E5FDBD /* JPCFunctionBinder */,
+				FF49BF411D93CEA800E5FDBD /* JPPlaygroundTool */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF49BF361D93CEA800E5FDBD /* JPCFunction */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF371D93CEA800E5FDBD /* libffi */,
+			);
+			path = JPCFunction;
+			sourceTree = "<group>";
+		};
+		FF49BF371D93CEA800E5FDBD /* libffi */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF381D93CEA800E5FDBD /* headers */,
+				FF49BF391D93CEA800E5FDBD /* src */,
+			);
+			path = libffi;
+			sourceTree = "<group>";
+		};
+		FF49BF381D93CEA800E5FDBD /* headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		FF49BF391D93CEA800E5FDBD /* src */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF3A1D93CEA800E5FDBD /* aarch64 */,
+				FF49BF3B1D93CEA800E5FDBD /* arm */,
+				FF49BF3C1D93CEA800E5FDBD /* common */,
+				FF49BF3D1D93CEA800E5FDBD /* x86 */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		FF49BF3A1D93CEA800E5FDBD /* aarch64 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = aarch64;
+			sourceTree = "<group>";
+		};
+		FF49BF3B1D93CEA800E5FDBD /* arm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = arm;
+			sourceTree = "<group>";
+		};
+		FF49BF3C1D93CEA800E5FDBD /* common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		FF49BF3D1D93CEA800E5FDBD /* x86 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = x86;
+			sourceTree = "<group>";
+		};
+		FF49BF3E1D93CEA800E5FDBD /* JPCFunctionBinder */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF3F1D93CEA800E5FDBD /* CoreGraphics */,
+				FF49BF401D93CEA800E5FDBD /* UIKit */,
+			);
+			path = JPCFunctionBinder;
+			sourceTree = "<group>";
+		};
+		FF49BF3F1D93CEA800E5FDBD /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		FF49BF401D93CEA800E5FDBD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FF49BF411D93CEA800E5FDBD /* JPPlaygroundTool */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF421D93CEA800E5FDBD /* JPPlaygroundModule */,
+				FF49BF431D93CEA800E5FDBD /* JPPlaygroundView */,
+			);
+			path = JPPlaygroundTool;
+			sourceTree = "<group>";
+		};
+		FF49BF421D93CEA800E5FDBD /* JPPlaygroundModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JPPlaygroundModule;
+			sourceTree = "<group>";
+		};
+		FF49BF431D93CEA800E5FDBD /* JPPlaygroundView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JPPlaygroundView;
+			sourceTree = "<group>";
+		};
+		FF49BF441D93CEA800E5FDBD /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF491D93CF8100E5FDBD /* JPEngine.h */,
+				FF49BF4A1D93CF8100E5FDBD /* JPEngine.m */,
+				FF49BF4B1D93CF8100E5FDBD /* JSPatch.js */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
+		FF49BF451D93CEA800E5FDBD /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF461D93CEA800E5FDBD /* libs */,
+				FF49BF481D93CEA800E5FDBD /* tools */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		FF49BF461D93CEA800E5FDBD /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				FF49BF471D93CEA800E5FDBD /* minizip */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		FF49BF471D93CEA800E5FDBD /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
+		FF49BF481D93CEA800E5FDBD /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +353,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF49BF4F1D93D00600E5FDBD /* main.js in Resources */,
+				FF49BF4D1D93CF8100E5FDBD /* JSPatch.js in Resources */,
 				FF429DFA1D92B6CF00F6DE7E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF49BF2F1D93CDE000E5FDBD /* ViewController.m in Sources */,
+				FF49BF4C1D93CF8100E5FDBD /* JPEngine.m in Sources */,
 				FF429DEF1D92B6CF00F6DE7E /* main.m in Sources */,
 				FF49BF321D93CE3600E5FDBD /* AppDelegate.m in Sources */,
 			);

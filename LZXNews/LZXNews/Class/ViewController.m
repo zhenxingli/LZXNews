@@ -16,13 +16,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = [UIColor greenColor];
+    self.title = @"首页";
+    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 50)];
+    [btn setTitle:@"Push JPTableViewController" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:btn];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)handleBtn:(id)sender
+{
 }
+
 
 @end

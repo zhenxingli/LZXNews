@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "JPEngine.h"
 
 @interface AppDelegate ()
 
@@ -17,12 +18,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //jspatch
+    [JPEngine startEngine];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
+    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+    [JPEngine evaluateScript:script];
     
+    //初始化window
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     ViewController *viewController = [[ViewController alloc] init];
-    self.window.rootViewController = viewController;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navigationController;
+    
     
     [self.window makeKeyAndVisible];
+    
+    
     
     return YES;
 }
