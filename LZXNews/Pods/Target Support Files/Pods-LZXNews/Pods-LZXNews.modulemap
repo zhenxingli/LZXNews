@@ -1,0 +1,6 @@
+framework module Pods_LZXNews {
+  umbrella header "Pods-LZXNews-umbrella.h"
+
+  export *
+  module * { export * }
+}
