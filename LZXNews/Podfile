@@ -1,7 +1,18 @@
 
-platform :ios, '7.0' 
+platform :ios, '8.0' 
+use_frameworks!
 
 target :LZXNews do
+
+ pod 'ReactiveCocoa', '~> 4.0.2-alpha-1'
  pod 'MBProgressHUD', '~> 0.8'
+ pod 'AFNetworking','~> 3.1.0'
+ pod 'MJExtension', '~> 3.0.10'
+ pod 'FMDB','~> 2.6'
+ pod 'XAspect', '~> 1.0.5'
+ pod 'Masonry', '~> 0.6.1'
+ pod 'SDWebImage', '~>3.8'
+ pod 'LinqToObjectiveC', '2.0.0'
+
 end
 

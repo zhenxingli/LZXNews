@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		876DE74EDAE884884A7F4A15 /* libPods-LZXNews.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D075F6F60878CC95ED460257 /* libPods-LZXNews.a */; };
+		DFEDFF47612A8AB5E0884850 /* Pods_LZXNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345660797BCDEE9697D017D0 /* Pods_LZXNews.framework */; };
 		FF429DEF1D92B6CF00F6DE7E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DEE1D92B6CF00F6DE7E /* main.m */; };
 		FF429DF21D92B6CF00F6DE7E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DF11D92B6CF00F6DE7E /* AppDelegate.m */; };
 		FF429DF51D92B6CF00F6DE7E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF429DF41D92B6CF00F6DE7E /* ViewController.m */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		345660797BCDEE9697D017D0 /* Pods_LZXNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LZXNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5599E68935980011B7A2266D /* Pods-LZXNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZXNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-LZXNews/Pods-LZXNews.release.xcconfig"; sourceTree = "<group>"; };
 		AEF4B6D3D42A2B1A89DDADA4 /* Pods-LZXNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LZXNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LZXNews/Pods-LZXNews.debug.xcconfig"; sourceTree = "<group>"; };
-		D075F6F60878CC95ED460257 /* libPods-LZXNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LZXNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF429DEA1D92B6CF00F6DE7E /* LZXNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZXNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF429DEE1D92B6CF00F6DE7E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FF429DF01D92B6CF00F6DE7E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				876DE74EDAE884884A7F4A15 /* libPods-LZXNews.a in Frameworks */,
+				DFEDFF47612A8AB5E0884850 /* Pods_LZXNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +56,7 @@
 		CBC77B5081CFA385B101306E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D075F6F60878CC95ED460257 /* libPods-LZXNews.a */,
+				345660797BCDEE9697D017D0 /* Pods_LZXNews.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
