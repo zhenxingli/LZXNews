@@ -22,6 +22,7 @@
     [btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
     [btn setBackgroundColor:[UIColor grayColor]];
     [self.view addSubview:btn];
+  //test
 }
 
 - (void)handleBtn:(id)sender
