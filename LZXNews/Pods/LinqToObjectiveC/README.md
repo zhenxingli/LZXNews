@@ -36,6 +36,7 @@ The code within project is made available under the standard MIT licence, see th
 
 - [linq_where](#where)
 - [linq_select](#select)
+- [linq_selectAndStopOnNil](#selectAndStopOnNil)
 - [linq_sort](#sort)
 - [linq_ofType](#ofType)
 - [linq_selectMany](#selectMany)
@@ -110,11 +111,21 @@ NSArray* names = [input linq_select:^id(id person) {
 }];
 ```
 
+### <a name="selectAndStopOnNil"></a>linq_selectAndStopOnNil
+
+```objc
+- (NSArray*)linq_selectAndStopOnNil:(LINQSelector)transform;
+```
+
+Projects each element of a sequence into a new form. If the transform returns nil for any of the elements, the projection fails and returns nil.
+
 ### <a name="sort"></a>linq_sort
 
 ```objc
 - (NSArray*) linq_sort;
 - (NSArray*) linq_sort:(LINQSelector)keySelector;
+- (NSArray*) linq_sortDescending;
+- (NSArray*) linq_sortDescending:(LINQSelector)keySelector;
 ```
 
 Sorts the elements of an array, either via their 'natural' sort order, or via a `keySelector`.
@@ -123,7 +134,7 @@ As an example of natural sort, the following sorts a collection of `NSNumber` in
 
 ```objc
 NSArray* input = @[@21, @34, @25];
-NSArray* sortedInput = [input sort];
+NSArray* sortedInput = [input linq_sort]; // 21, 25, 34
 ```
 
 In order to sort an array of Person instances, you can use the key selector:
@@ -133,7 +144,23 @@ NSArray* sortedByName = [input linq_sort:^id(id person) {
     return [person name];
 }];
 ```
+
+The accompanying 'descending' methods simply reverse the sort order:
+
+```objc
+NSArray* input = @[@21, @34, @25];
+NSArray* sortedInput = [input linq_sort]; // 21, 25, 34
+NSArray* sortedInput = [input linq_sortDescending]; // 34, 25, 21
+```
     
+### <a name="sum"></a>linq_sum
+
+```objc
+- (NSNumber *)linq_sum;
+```
+
+Sums the elements in the array.
+
 ### <a name="ofType"></a>linq_ofType
 
 ```objc
@@ -232,6 +259,7 @@ id biggestNumber = [numbers linq_aggregate:^id(id item, id aggregate) {
 
 ```objc
 - (id) linq_firstOrNil;
+- (id) linq_firstOrNil:(LINQCondition)predicate;
 ```
 
 Returns the first element of an array, or nil if the array is empty.

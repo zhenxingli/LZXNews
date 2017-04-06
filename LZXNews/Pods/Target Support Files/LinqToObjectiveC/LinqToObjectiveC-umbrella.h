@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "LinqToObjectiveC.h"
 #import "NSArray+LinqExtensions.h"
 #import "NSDictionary+LinqExtensions.h"
 
