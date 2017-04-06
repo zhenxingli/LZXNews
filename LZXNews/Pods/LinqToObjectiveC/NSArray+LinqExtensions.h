@@ -45,6 +45,15 @@ typedef id (^LINQAccumulator)(id item, id aggregate);
  */
 - (NSArray*) linq_select:(LINQSelector)transform;
 
+/** Projects each element of a sequence into a new form. If the transform returns nil for any of the elements,
+the projection fails and returns nil.
+ 
+ @param selector A transform function to apply to each element.
+ @return An array whose elements are the result of invoking the transform function on each element of source.
+ */
+- (NSArray*)linq_selectAndStopOnNil:(LINQSelector)transform;
+
+
 /** Sorts the elements of a sequence in ascending order.
  
  @return An array whose elements are sorted in ascending order.
@@ -57,6 +66,19 @@ typedef id (^LINQAccumulator)(id item, id aggregate);
  @return An array whose elements are sorted in ascending order.
  */
 - (NSArray*) linq_sort:(LINQSelector)keySelector;
+
+/** Sorts the elements of a sequence in descending order.
+ 
+ @return An array whose elements are sorted in descending order.
+ */
+- (NSArray *)linq_sortDescending;
+
+/** Sorts the elements of a sequence in descending order by using a specified keySelector.
+ 
+ @param keySelector A selector that provides the 'key' which the array should by sorted by.
+ @return An array whose elements are sorted in descending order.
+ */
+- (NSArray *)linq_sortDescending:(LINQSelector)keySelector;
 
 /** Filters the elements of an an array based on a specified type.
  
@@ -97,6 +119,13 @@ typedef id (^LINQAccumulator)(id item, id aggregate);
  @return The first item from the source array, or nil if the array is empty.
  */
 - (id) linq_firstOrNil;
+
+/** Returns the first item from the source array matching a predicate, or nil if there are no objects passing the test.
+ 
+ @param predicate The function to test each source element for a condition.
+ @return An item from the input sequence that satisfy the condition.
+ */
+- (id)linq_firstOrNil:(LINQCondition)predicate;
 
 /** Returns the last item from the source array, or nil if the array is empty.
  
@@ -173,5 +202,11 @@ typedef id (^LINQAccumulator)(id item, id aggregate);
  @return The reversed array.
  */
 - (NSArray*) linq_reverse;
+
+/** Sums the elements in the array.
+ 
+ @return The sum of elements within this array.
+ */
+- (NSNumber*)linq_sum;
 
 @end

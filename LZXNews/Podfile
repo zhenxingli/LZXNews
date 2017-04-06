@@ -12,7 +12,7 @@ target :LZXNews do
  pod 'XAspect', '~> 1.0.5'
  pod 'Masonry', '~> 0.6.1'
  pod 'SDWebImage', '~>3.8'
- pod 'LinqToObjectiveC', '2.0.0'
+ pod 'LinqToObjectiveC', '2.1.0'
 
 end
 

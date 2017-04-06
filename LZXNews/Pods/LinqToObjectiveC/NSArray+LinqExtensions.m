@@ -22,14 +22,43 @@
 }
 
 - (NSArray *)linq_select:(LINQSelector)transform
+          andStopOnError:(BOOL)shouldStopOnError
 {
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:self.count];
-    for(id item in self) {
+    for(id item in self)
+    {
         id object = transform(item);
-        [result addObject:(object) ? object : [NSNull null]];
+        if (nil != object)
+        {
+            [result addObject: object];
+        }
+        else
+        {
+            if (shouldStopOnError)
+            {
+                return nil;
+            }
+            else
+            {
+                [result addObject: [NSNull null]];
+            }
+        }
     }
     return result;
 }
+
+- (NSArray *)linq_select:(LINQSelector)transform
+{
+    return [self linq_select: transform
+              andStopOnError: NO];
+}
+
+- (NSArray*)linq_selectAndStopOnNil:(LINQSelector)transform
+{
+    return [self linq_select: transform
+              andStopOnError: YES];
+}
+
 
 - (NSArray *)linq_sort:(LINQSelector)keySelector
 {
@@ -44,6 +73,21 @@
 - (NSArray *)linq_sort
 {
     return [self linq_sort:^id(id item) { return item;} ];
+}
+
+- (NSArray *)linq_sortDescending:(LINQSelector)keySelector
+{
+    return [self sortedArrayUsingComparator:^NSComparisonResult(id obj2, id obj1) {
+        id valueOne = keySelector(obj1);
+        id valueTwo = keySelector(obj2);
+        NSComparisonResult result = [valueOne compare:valueTwo];
+        return result;
+    }];
+}
+
+- (NSArray *)linq_sortDescending
+{
+    return [self linq_sortDescending:^id(id item) { return item;} ];
 }
 
 - (NSArray *)linq_ofType:(Class)type
@@ -107,6 +151,16 @@
 - (id)linq_firstOrNil
 {
     return self.count == 0 ? nil : [self objectAtIndex:0];
+}
+
+- (id)linq_firstOrNil:(LINQCondition)predicate
+{
+    for(id item in self) {
+        if (predicate(item)) {
+            return item;
+        }
+    }
+    return nil;
 }
 
 - (id)linq_lastOrNil
@@ -212,5 +266,9 @@
     return result;
 }
 
+- (NSNumber *)linq_sum
+{
+    return [self valueForKeyPath: @"@sum.self"];
+}
 
 @end

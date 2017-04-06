@@ -15,6 +15,7 @@
 		FF49BF4C1D93CF8100E5FDBD /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = FF49BF4A1D93CF8100E5FDBD /* JPEngine.m */; };
 		FF49BF4D1D93CF8100E5FDBD /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = FF49BF4B1D93CF8100E5FDBD /* JSPatch.js */; };
 		FF49BF4F1D93D00600E5FDBD /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = FF49BF4E1D93D00600E5FDBD /* main.js */; };
+		FF7B2EC81E5697D8000762EE /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7B2EC71E5697D8000762EE /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		FF49BF4A1D93CF8100E5FDBD /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		FF49BF4B1D93CF8100E5FDBD /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
 		FF49BF4E1D93D00600E5FDBD /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = main.js; path = Class/main.js; sourceTree = "<group>"; };
+		FF7B2EC61E5697D8000762EE /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FF7B2EC71E5697D8000762EE /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				FF49BF2E1D93CDE000E5FDBD /* ViewController.m */,
 				FF49BF301D93CE3600E5FDBD /* AppDelegate.h */,
 				FF49BF311D93CE3600E5FDBD /* AppDelegate.m */,
+				FF7B2EC61E5697D8000762EE /* FirstViewController.h */,
+				FF7B2EC71E5697D8000762EE /* FirstViewController.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 			files = (
 				FF49BF2F1D93CDE000E5FDBD /* ViewController.m in Sources */,
 				FF49BF4C1D93CF8100E5FDBD /* JPEngine.m in Sources */,
+				FF7B2EC81E5697D8000762EE /* FirstViewController.m in Sources */,
 				FF429DEF1D92B6CF00F6DE7E /* main.m in Sources */,
 				FF49BF321D93CE3600E5FDBD /* AppDelegate.m in Sources */,
 			);
