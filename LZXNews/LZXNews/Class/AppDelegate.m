@@ -9,15 +9,17 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "JPEngine.h"
+#import <FLEX/FLEX.h>
 
 @interface AppDelegate ()
 
 @end
-
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[FLEXManager sharedManager] showExplorer];
+
     //jspatch
     [JPEngine startEngine];
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"main" ofType:@"js"];
